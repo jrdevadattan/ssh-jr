@@ -7,7 +7,7 @@
                    |__/      
 ```
 
-A simple Python script for brute-forcing SSH credentials using a wordlist, powered by [`paramiko`](https://pypi.org/project/paramiko/).
+A simple Python script for brute-forcing SSH credentials using a wordlists.
 
 ## 🛠️ Features
 
