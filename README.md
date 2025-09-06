@@ -1,4 +1,11 @@
-# 🚀 ssh-jr
+```
+          _           _      
+  ___ ___| |__       (_)_ __ 
+ / __/ __| '_ \ _____| | '__|
+ \__ \__ \ | | |_____| | |   
+ |___/___/_| |_|    _/ |_|   
+                   |__/      
+```
 
 A simple Python script for brute-forcing SSH credentials using a wordlist, powered by [`paramiko`](https://pypi.org/project/paramiko/).
 
