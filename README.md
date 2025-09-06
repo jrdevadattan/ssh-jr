@@ -53,7 +53,6 @@ Enter path to wordlist file: rockyou.txt
 
 - [SecLists (GitHub)](https://github.com/danielmiessler/SecLists/tree/master/Passwords)
 - [Weakpass](https://weakpass.com/)
-- [CrackStation](https://crackstation.net/crackstation-wordlist.txt)
 - [rockyou.txt (SecLists)](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz)
 
 ## 🗺️ Future Plans
