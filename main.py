@@ -33,6 +33,7 @@ def connection(words):
             password = words[i]
             client.connect(hostname, username=username, password=password, timeout=5)
             print(f"Success: {password}")
+            return True
         except paramiko.AuthenticationException:
             print(f"Fail: {password}")
         except Exception as e:
