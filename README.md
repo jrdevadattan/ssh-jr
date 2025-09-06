@@ -34,7 +34,7 @@ A simple Python script for brute-forcing SSH credentials using a wordlist, power
 ## 📚 Usage
 
 1. **Prepare your wordlist:**  
-   You find the wordlist resouces below.
+   You can find the wordlist resouces below.
 
 2. **Run the script:**
 
