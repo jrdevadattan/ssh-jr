@@ -9,14 +9,14 @@
 
 A simple Python script for brute-forcing SSH credentials using a wordlists.
 
-## 🛠️ Features
+## Features
 
 
-- 🖥️ Prompts for hostname, username, and wordlist path
-- 🔑 Attempts SSH login for each password in the wordlist
-- ✅ Reports success or failure for each attempt
+- Prompts for hostname, username, and wordlist path
+- Attempts SSH login for each password in the wordlist
+- Reports success or failure for each attempt
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository:**
 
@@ -31,7 +31,7 @@ A simple Python script for brute-forcing SSH credentials using a wordlists.
     pip install -r requirements.txt
     ```
 
-## 📚 Usage
+## Usage
 
 1. **Prepare your wordlist:**  
    You can find the wordlist resouces below.
@@ -48,7 +48,7 @@ A simple Python script for brute-forcing SSH credentials using a wordlists.
     - Enter the username
     - Enter the path to your wordlist file
 
-## 💡 Example
+## Example
 
 ```
 Enter hostname or IP: 192.168.1.10
@@ -56,19 +56,19 @@ Enter username: admin
 Enter path to wordlist file: rockyou.txt
 ```
 
-## 📖 Wordlist Resources
+## Wordlist Resources
 
 - [SecLists (GitHub)](https://github.com/danielmiessler/SecLists/tree/master/Passwords)
 - [Weakpass](https://weakpass.com/)
 - [rockyou.txt (SecLists)](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz)
 
-## 🗺️ Future Plans
+## Future Plans
 
-- ⚡ Add threading to make brute-force faster
-- 🚀 Optimize performance for large wordlists
-- 📝 More logging and reporting features
+- Add threading to make brute-force faster
+- Optimize performance for large wordlists
+- More logging and reporting features
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This tool is for educational and authorized testing purposes only.  
 **Do not use it on systems without explicit permission.**
